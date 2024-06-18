@@ -1,3 +1,6 @@
+console.log("Sketch.js cargado correctamente");
+
+// Resto del código
 let video;
 let botonInicio;
 let sonidos = [];
