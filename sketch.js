@@ -36,6 +36,7 @@ function iniciarExperiencia() {
   video.show();
   video.elt.play();
   setTimeout(() => {
+    console.log('Pausando video y comenzando creación de ventanas');
     video.elt.pause();
     document.getElementById('fondo-arte').style.filter = 'blur(10px)';
     iniciarCreacionVentanas();
@@ -44,9 +45,11 @@ function iniciarExperiencia() {
 
 function iniciarCreacionVentanas() {
   console.log('Iniciar creación de ventanas');
+  // Aquí puedes agregar el código para crear ventanas
 }
 
 function reiniciarExperiencia() {
+  console.log('Reiniciar experiencia');
   video.hide();
   video.stop();
   video.elt.currentTime = 0;
