@@ -1,5 +1,19 @@
 let video;
 let botonInicio;
+let sonidos = [];
+
+function preload() {
+  // Cargar los sonidos de notificación y manejar posibles errores
+  for (let i = 1; i <= 10; i++) {
+    let rutaSonido = `sonidos/audio_${i.toString().padStart(2, '0')}/${i.toString().padStart(2, '0')}.wav`;
+    loadSound(rutaSonido, (sonido) => {
+      console.log(`Sonido ${rutaSonido} cargado correctamente`);
+      sonidos.push(sonido);
+    }, (err) => {
+      console.error(`Error al cargar el sonido ${rutaSonido}:`, err);
+    });
+  }
+}
 
 function setup() {
   noCanvas();
